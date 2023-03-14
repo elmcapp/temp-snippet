@@ -3,7 +3,7 @@
 This project contains a React Native TypeScript application with two connection dialogs. The dialogs are shown based on the state of the application. Dialog 1 has 2 buttons and a FlatList, while Dialog 2 has 1 button and an Activity Indicator. The project follows a modular structure to organize the components, subcomponents, and custom hooks.
 
 ## Folder Structure
-
+```tsx
 src/
   ├─ components/
   │   ├─ ConnectionDialogs/
@@ -23,7 +23,7 @@ src/
   │   │       └─ connectionDialogTypes.ts
   │   └─ ...
   └─ ...
-
+```
 
 ## Example Usage
 
@@ -47,8 +47,9 @@ const ConnectionDialogs = () => {
 };
 
 export default ConnectionDialogs;
-
+```
 ### ConnectionDialogs/subcomponents/Dialog1.tsx
+```tsx
 import React from 'react';
 import { View } from 'react-native';
 import CustomButton from './CustomButton';
@@ -67,8 +68,9 @@ const Dialog1 = () => {
 };
 
 export default Dialog1;
-
+```
 ### ConnectionDialogs/subcomponents/Dialog2.tsx
+```tsx
 import React from 'react';
 import { View, ActivityIndicator } from 'react-native';
 import CustomButton from './CustomButton';
@@ -85,5 +87,5 @@ const Dialog2 = () => {
 };
 
 export default Dialog2;
-
+```
 This structure maintains a clear separation of concerns between the dialogs, while also organizing the subcomponents and hooks in a clean manner. You can conditionally render each dialog based on the `dialogState` value in the parent `ConnectionDialogs` component.
