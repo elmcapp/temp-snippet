@@ -89,3 +89,15 @@ const Dialog2 = () => {
 export default Dialog2;
 ```
 This structure maintains a clear separation of concerns between the dialogs, while also organizing the subcomponents and hooks in a clean manner. You can conditionally render each dialog based on the `dialogState` value in the parent `ConnectionDialogs` component.
+
+## Explanation of the Structure
+
+1. **Create a dedicated folder** for your ConnectionDialog component inside the components folder.
+2. **Move your ConnectionDialog component code** into the `index.tsx` file within the ConnectionDialog folder.
+3. **Create a `styles.ts` file** to store all the styles for the ConnectionDialog component.
+4. **Create a `hooks` folder** to store all custom hooks. Break down each custom hook into its own file, such as `useFirstCustomHook.ts` and `useSecondCustomHook.ts`. Import these hooks into your ConnectionDialog component as needed.
+5. **If your ConnectionDialog component includes subcomponents**, create a `subcomponents` folder and move each subcomponent into its own file within this folder.
+6. **Create a `types` folder** to store any TypeScript types specific to the ConnectionDialog component, such as interfaces or type aliases.
+
+With this structure, your code will be more organized and easier to navigate. When you need to make changes or add new features, it will be simpler to locate the relevant code blocks.
+
